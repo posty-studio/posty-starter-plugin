@@ -1,0 +1,24 @@
+{
+  "name": "posty-starter-plugin",
+  "version": "1.0.0",
+  "description": "An opinionated starter plugin for WordPress.",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/posty-studio/posty-starter-plugin.git"
+  },
+  "author": "Posty Studio <daniel@danielpost.com> (https://posty.studio/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/posty-studio/posty-starter-plugin/issues"
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "devDependencies": {
+    "@wordpress/scripts": "^8.0.1"
+  }
+}
