@@ -3,8 +3,10 @@
 namespace Posty_Starter_Plugin\Custom_Post_Types;
 
 class Event extends Base {
+    const NAME = 'posty-event';
+
     public function __construct() {
-        $this->name = 'posty-event';
+        $this->name = self::NAME;
         $this->options = [
             'slug' => __('event', 'posty-starter-plugin'),
             'singular' => __('Event', 'posty-starter-plugin'),
@@ -24,7 +26,7 @@ class Event extends Base {
      */
     public static function latest() {
         return get_posts([
-            'post_type' => $this->name,
+            'post_type' => self::NAME,
             'posts_per_page' => 3
         ]);
     }

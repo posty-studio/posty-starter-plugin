@@ -9,7 +9,7 @@ class Event_Category extends Base {
             'slug' => __('event-category', 'posty-starter-plugin'),
             'object_type' => 'posty-event',
             'singular' => __('Event Category', 'posty-starter-plugin'),
-            'plural' => __('Events Categories', 'posty-starter-plugin'),
+            'plural' => __('Event Categories', 'posty-starter-plugin'),
         ];
 
         parent::__construct();

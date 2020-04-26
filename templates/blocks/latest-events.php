@@ -1,12 +1,11 @@
 <?php
 
 use Posty_Starter_Plugin\Custom_Post_Types\Event;
-use Posty_Starter_Plugin\Helpers;
 use Posty_Starter_Plugin\Template;
 
 $attributes = Template::var('attributes');
 $content = Template::var('content'); // InnerBlocks Content
-$class = Helpers::classnames('wp-block-posty-starter-plugin-latest-events', $attributes['className'] ?? '');
+$class = Template::var('class');
 $events = Event::latest();
 ?>
 

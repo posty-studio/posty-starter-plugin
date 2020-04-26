@@ -13,6 +13,8 @@ if (!defined('WPINC')) {
     die;
 }
 
+require_once __DIR__ . '/includes/helpers.php';
+
 spl_autoload_register(function ($class) {
     if (strpos($class, 'Posty_Starter_Plugin\\') !== 0) {
         return;

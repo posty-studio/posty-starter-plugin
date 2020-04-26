@@ -33,6 +33,10 @@ class Blocks {
         return Template::get('blocks/' . $block, [
             'attributes' => $attributes,
             'content' => $content,
+            'class' => classes([
+                "wp-block-posty-starter-plugin-{$block}",
+                $attributes['className'] ?? ''
+            ])
         ]);
     }
 }

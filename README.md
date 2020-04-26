@@ -21,3 +21,7 @@ There's a few placeholders that need to be replaced. Please note that these are 
 ## Development
 
 Run `npm run start` to start developing. Webpack will automatically process style and script changes.
+
+## Build
+
+Run `npm run build` to compile and minify all assets.
