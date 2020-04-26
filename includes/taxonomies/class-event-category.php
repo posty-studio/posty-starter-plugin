@@ -3,8 +3,10 @@
 namespace Posty_Starter_Plugin\Taxonomies;
 
 class Event_Category extends Base {
+    const NAME = 'posty-event-category';
+
     public function __construct() {
-        $this->name = 'posty-event-category';
+        $this->name = self::NAME;
         $this->options = [
             'slug' => __('event-category', 'posty-starter-plugin'),
             'object_type' => 'posty-event',
@@ -21,6 +23,6 @@ class Event_Category extends Base {
      * @return WP_Term[]|int List of WP_Term instances and their children.
      */
     public static function all() {
-        return get_terms(['taxonomy' => $this->name]);
+        return get_terms(['taxonomy' => self::NAME]);
     }
 }
