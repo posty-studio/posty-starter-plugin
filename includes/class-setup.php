@@ -18,9 +18,10 @@ class Setup {
     }
 
     public function init() {
-        new Assets();
-        new Custom_Post_Types\Event();
-        new Blocks();
-        new Filters();
+        new Assets;
+        new Custom_Post_Types\Event;
+        new Taxonomies\Event_Category;
+        new Blocks;
+        new Filters;
     }
 }

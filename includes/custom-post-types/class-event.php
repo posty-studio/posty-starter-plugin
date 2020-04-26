@@ -20,7 +20,7 @@ class Event extends Base {
     /**
      * Get the latest events.
      *
-     * @return array
+     * @return WP_Post[]
      */
     public static function latest() {
         return get_posts([

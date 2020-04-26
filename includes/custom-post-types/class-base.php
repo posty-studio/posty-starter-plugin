@@ -40,7 +40,7 @@ abstract class Base {
             'view_item'             => sprintf(__('View %s', 'posty-starter-plugin'), $this->options['singular']),
             'all_items'             => sprintf(__('All %s', 'posty-starter-plugin'), $this->options['plural']),
             'search_items'          => sprintf(__('Search %s', 'posty-starter-plugin'), $this->options['plural']),
-            'parent_item_colon'     => sprintf(__('Parent %s:', 'posty-starter-plugin'), $this->options['plural']),
+            'parent_item_colon'     => sprintf(__('Parent %s:', 'posty-starter-plugin'), $this->options['singular']),
             'not_found'             => sprintf(__('No %s found.', 'posty-starter-plugin'), $this->options['plural']),
             'not_found_in_trash'    => sprintf(__('No %s found in Trash.', 'posty-starter-plugin'), $this->options['plural']),
             'archives'              => sprintf(__('%s archives', 'posty-starter-plugin'), $this->options['singular']),
@@ -67,6 +67,6 @@ abstract class Base {
             'supports'           => ['title', 'editor', 'author', 'excerpt', 'custom-fields'],
         ];
 
-        register_post_type($this->name, array_merge($defaults, $this->options['args']));
+        register_post_type($this->name, array_merge($defaults, $this->options['args'] ?? []));
     }
 }
