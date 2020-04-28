@@ -1,11 +1,10 @@
 <?php
 
 use Posty_Starter_Plugin\Custom_Post_Types\Event;
-use Posty_Starter_Plugin\Template;
 
-$attributes = Template::var('attributes');
-$content = Template::var('content'); // InnerBlocks Content
-$class = Template::var('class');
+$attributes = Posty_Starter_Plugin\get_template_var('attributes');
+$content = Posty_Starter_Plugin\get_template_var('content'); // InnerBlocks Content
+$class = Posty_Starter_Plugin\get_template_var('class');
 $events = Event::latest();
 ?>
 

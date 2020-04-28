@@ -30,7 +30,7 @@ class Blocks {
      * @return string
      */
     public function render($attributes, $content, $block) {
-        return Template::get('blocks/' . $block, [
+        return get_template('blocks/' . $block, [
             'attributes' => $attributes,
             'content' => $content,
             'class' => classes([

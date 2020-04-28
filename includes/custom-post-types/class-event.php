@@ -5,9 +5,11 @@ namespace Posty_Starter_Plugin\Custom_Post_Types;
 class Event extends Base {
     const NAME = 'posty-event';
 
-    public function __construct() {
-        $this->name = self::NAME;
-        $this->options = [
+    /**
+     * Register the custom post type.
+     */
+    public static function register() {
+        $options = [
             'slug' => __('event', 'posty-starter-plugin'),
             'singular' => __('Event', 'posty-starter-plugin'),
             'plural' => __('Events', 'posty-starter-plugin'),
@@ -16,7 +18,7 @@ class Event extends Base {
             ]
         ];
 
-        parent::__construct();
+        parent::register_cpt(self::NAME, $options);
     }
 
     /**

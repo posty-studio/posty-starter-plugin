@@ -5,16 +5,18 @@ namespace Posty_Starter_Plugin\Taxonomies;
 class Event_Category extends Base {
     const NAME = 'posty-event-category';
 
-    public function __construct() {
-        $this->name = self::NAME;
-        $this->options = [
+    /**
+     * Register the taxonomy.
+     */
+    public static function register() {
+        $options = [
             'slug' => __('event-category', 'posty-starter-plugin'),
             'object_type' => 'posty-event',
             'singular' => __('Event Category', 'posty-starter-plugin'),
             'plural' => __('Event Categories', 'posty-starter-plugin'),
         ];
 
-        parent::__construct();
+        parent::register_taxonomy(self::NAME, $options);
     }
 
     /**
