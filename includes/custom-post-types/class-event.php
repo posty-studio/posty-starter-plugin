@@ -1,6 +1,6 @@
 <?php
 
-namespace Posty_Starter_Plugin\Custom_Post_Types;
+namespace Posty\Starter_Plugin\Custom_Post_Types;
 
 class Event extends Base {
     const NAME = 'posty-event';
@@ -33,3 +33,4 @@ class Event extends Base {
         ]);
     }
 }
+

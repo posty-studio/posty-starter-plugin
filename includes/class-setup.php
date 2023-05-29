@@ -1,6 +1,6 @@
 <?php
 
-namespace Posty_Starter_Plugin;
+namespace Posty\Starter_Plugin;
 
 class Setup {
     public function __construct() {

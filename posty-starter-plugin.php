@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Posty Starter Plugin
  * Description: An opinionated WordPress starter plugin.
@@ -16,11 +17,11 @@ if (!defined('WPINC')) {
 require_once __DIR__ . '/includes/helpers.php';
 
 spl_autoload_register(function ($class) {
-    if (strpos($class, 'Posty_Starter_Plugin\\') !== 0) {
+    if (strpos($class, 'Posty\Starter_Plugin\\') !== 0) {
         return;
     }
 
-    $file = str_replace('Posty_Starter_Plugin\\', '', $class);
+    $file = str_replace('Posty\Starter_Plugin\\', '', $class);
     $file = strtolower($file);
     $file = str_replace('_', '-', $file);
 
@@ -32,5 +33,5 @@ spl_autoload_register(function ($class) {
     require_once __DIR__ . '/includes/' . $path . '/class-' . $file . '.php';
 });
 
-$setup = new Posty_Starter_Plugin\Setup();
+$setup = new Posty\Starter_Plugin\Setup();
 $setup->init();

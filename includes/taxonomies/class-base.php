@@ -1,6 +1,6 @@
 <?php
 
-namespace Posty_Starter_Plugin\Taxonomies;
+namespace Posty\Starter_Plugin\Taxonomies;
 
 abstract class Base {
     /**
