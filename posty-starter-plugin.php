@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Plugin Name: Posty Starter Plugin
  * Description: An opinionated WordPress starter plugin.
@@ -7,31 +6,16 @@
  * Author URI: https://posty.studio
  * License: GPL-3.0
  * Version: 1.0.0
+ *
+ * @package posty/starter-plugin
  */
 
 // If this file is called directly, abort.
-if (!defined('WPINC')) {
-    die;
+if ( ! defined( 'WPINC' ) ) {
+	die;
 }
 
-require_once __DIR__ . '/includes/helpers.php';
+require __DIR__ . '/vendor/autoload.php';
 
-spl_autoload_register(function ($class) {
-    if (strpos($class, 'Posty\Starter_Plugin\\') !== 0) {
-        return;
-    }
-
-    $file = str_replace('Posty\Starter_Plugin\\', '', $class);
-    $file = strtolower($file);
-    $file = str_replace('_', '-', $file);
-
-    /* Convert sub-namespaces into directories */
-    $path = explode('\\', $file);
-    $file = array_pop($path);
-    $path = implode('/', $path);
-
-    require_once __DIR__ . '/includes/' . $path . '/class-' . $file . '.php';
-});
-
-$setup = new Posty\Starter_Plugin\Setup();
-$setup->init();
+$posty_setup = new Posty\Starter_Plugin\Setup();
+$posty_setup->init();

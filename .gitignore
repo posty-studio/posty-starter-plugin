@@ -1,4 +1,5 @@
 node_modules
 assets
 vendor
+wordpress
 package-lock.json
