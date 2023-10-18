@@ -1,9 +1,7 @@
 import { registerBlockStyle } from '@wordpress/blocks';
-import latestEvents from './blocks/latest-events';
+import '../../css/editor.scss';
 
-latestEvents();
-
-registerBlockStyle('core/group', {
-    name: 'fancy-quote',
-    label: 'Fancy Quote',
-});
+registerBlockStyle( 'core/group', {
+	name: 'fancy-quote',
+	label: 'Fancy Quote',
+} );

@@ -16,10 +16,10 @@ abstract class Base {
 	 *       'args'     => (array) Args to overwrite when calling register_post_type. Optional.
 	 *     ].
 	 */
-	final public static function register_cpt( $name, $options ) {
+	final public function register_cpt( $name, $options ) {
 		add_action(
 			'init',
-			function() use ( $name, $options ) {
+			function () use ( $name, $options ) {
 				$labels = array(
 					'name'                  => sprintf( _x( '%s', 'post type general name', 'posty-starter-plugin' ), $options['plural'] ),
 					'singular_name'         => sprintf( _x( '%s', 'post type singular name', 'posty-starter-plugin' ), $options['singular'] ),

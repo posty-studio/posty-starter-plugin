@@ -1,0 +1,1 @@
+{"version":3,"file":"js/blocks/latest-events/view.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAE,OAAQ,CAAC,C","sources":["webpack://posty-starter-plugin/./src/js/blocks/latest-events/view.js"],"sourcesContent":["console.log( 'block' );\n"],"names":["console","log"],"sourceRoot":""}

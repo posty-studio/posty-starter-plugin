@@ -1,14 +1,10 @@
-const path = require( 'path' );
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 
 module.exports = {
 	...defaultConfig,
 	entry: {
-		admin: './src/js/admin/index.js',
+		...defaultConfig.entry(),
 		app: './src/js/app/index.js',
-	},
-	output: {
-		filename: 'js/[name].js',
-		path: path.resolve( 'assets' ),
+		admin: './src/js/admin/index.js',
 	},
 };

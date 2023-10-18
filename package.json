@@ -21,6 +21,8 @@
 	],
 	"devDependencies": {
 		"@wordpress/prettier-config": "^3.0.0",
-		"@wordpress/scripts": "^26.14.0"
+		"@wordpress/scripts": "^26.14.0",
+		"postcss-import": "^15.1.0",
+		"postcss-preset-env": "^9.2.0"
 	}
 }

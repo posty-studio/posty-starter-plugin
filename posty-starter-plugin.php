@@ -17,5 +17,4 @@ if ( ! defined( 'WPINC' ) ) {
 
 require __DIR__ . '/vendor/autoload.php';
 
-$posty_setup = new Posty\Starter_Plugin\Setup();
-$posty_setup->init();
+( new Posty\Starter_Plugin\Setup() )->init();

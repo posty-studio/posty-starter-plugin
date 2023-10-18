@@ -13,9 +13,9 @@ class Blocks {
 	);
 
 	/**
-	 * Constructor.
+	 * Register hooks.
 	 */
-	public function __construct() {
+	public function register_hooks() {
 		add_action( 'init', array( $this, 'register' ) );
 	}
 
@@ -24,38 +24,7 @@ class Blocks {
 	 */
 	public function register() {
 		foreach ( $this->blocks as $block ) {
-			register_block_type(
-				POSTY_STARTER_PLUGIN_SLUG . '/' . $block,
-				array(
-					'render_callback' => function ( $attributes, $content ) use ( $block ) {
-						return call_user_func_array( array( $this, 'render' ), array( $attributes, $content, $block ) );
-					},
-				)
-			);
+			register_block_type( POSTY_STARTER_PLUGIN_BLOCKS_PATH . $block );
 		}
-	}
-
-	/**
-	 * Render a server-side rendered block.
-	 *
-	 * @param array  $attributes Block attributes.
-	 * @param string $content Optional InnerBlocks content.
-	 * @param string $block Block name.
-	 * @return string
-	 */
-	public function render( $attributes, $content, $block ) {
-		return get_template(
-			'blocks/' . $block,
-			array(
-				'attributes' => $attributes,
-				'content'    => $content,
-				'class'      => classes(
-					array(
-						"wp-block-posty-starter-plugin-{$block}",
-						$attributes['className'] ?? '',
-					)
-				),
-			)
-		);
 	}
 }

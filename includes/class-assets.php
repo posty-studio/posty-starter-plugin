@@ -4,11 +4,11 @@ namespace Posty\Starter_Plugin;
 
 class Assets {
 	/**
-	 * Constructor.
+	 * Register hooks.
 	 */
-	public function __construct() {
+	public function register_hooks() {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'register_block_editor_assets' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_frontend_assets' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ) );
 	}
 
 	/**
@@ -65,8 +65,8 @@ class Assets {
 	/**
 	 * Registers and enqueues frontend assets.
 	 */
-	public function register_frontend_assets() {
-		$this->add_style( 'frontend' );
-		$this->add_script( 'frontend' );
+	public function register_assets() {
+		$this->add_style( 'app' );
+		$this->add_script( 'app' );
 	}
 }
